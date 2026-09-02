@@ -327,9 +327,11 @@ p { margin: 0 0 1em; }
 .geo-map__point { opacity: 0; outline: none; cursor: pointer; }
 .geo-map.is-visible .geo-map__point { animation: geo-point .45s ease-out forwards; }
 .geo-map.is-visible .geo-map__point { animation-delay: var(--geo-delay, 2s); }
-.geo-map__point--irkutsk .geo-map__dot { fill: var(--navy); }
+.geo-map__hub .geo-map__dot { fill: var(--navy); }
 .geo-map__dot { fill: var(--accent); stroke: #fff; stroke-width: 3; }
 .geo-map__pulse { fill: rgba(184,74,50,.14); stroke: rgba(184,74,50,.3); stroke-width: 1; animation: geo-pulse 2.2s ease-out infinite; }
+.geo-map__vehicle { fill: var(--accent); stroke: #fff; stroke-width: 2; opacity: 0; }
+.geo-map.is-visible .geo-map__vehicle { opacity: .95; }
 .geo-map__point text { fill: #405463; font: 700 13px Manrope, sans-serif; }
 .geo-map__point:hover .geo-map__dot, .geo-map__point:focus .geo-map__dot { fill: var(--navy); }
 .geo-map__point:hover text, .geo-map__point:focus text { fill: var(--navy); }
@@ -348,6 +350,7 @@ p { margin: 0 0 1em; }
 @media (prefers-reduced-motion: reduce) {
   .geo-map__route, .geo-map__point { animation: none !important; opacity: 1; stroke-dashoffset: 0; }
   .geo-map__pulse { animation: none; }
+  .geo-map__vehicle { display: none; }
 }
 
 .order {
