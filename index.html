@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ВЕКСНАБ — поставка строительных материалов под объект</title>
+  <meta name="description" content="ВЕКСНАБ — поставка строительных материалов под объект: теплоизоляция, кровля, фасад, водостоки, крепёж. Оставьте заявку.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__note">Поставка стройматериалов под заказ · Работаем с частными и коммерческими объектами</p>
+      <div class="topbar__contacts">
+        <a href="tel:+79952530109">+7 (995) 253-01-09</a>
+        <span class="dot"></span>
+        <span>Пн–Сб: 9:00–18:00</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="ВЕКСНАБ — на главную">
+        <img src="images/logo.jpg" alt="ВЕКСНАБ. Качество. Надёжность.">
+      </a>
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#catalog">Категории</a>
+        <a href="#how">Как работаем</a>
+        <a href="#geo">География</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#order">Заявка</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="tel:+79952530109">Позвонить</a>
+        <a class="btn btn--primary" href="#order">Оставить заявку</a>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1>Стройматериалы под ваш объект — подберём, согласуем, поставим</h1>
+          <p class="lead">Снабжение объектов: теплоизоляция, кровля, фасад, водостоки и крепёж. Описываете задачу — собираем комплект и организуем поставку.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#order">Оставить заявку</a>
+            <a class="btn btn--line btn--lg" href="#catalog">Смотреть категории</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>1 заявка</strong><span>вместо обхода нескольких баз</span></li>
+            <li><strong>Под объект</strong><span>позиции и объём под вашу задачу</span></li>
+            <li><strong>Комплект</strong><span>утеплитель, кровля, фасад, крепёж</span></li>
+          </ul>
+        </div>
+        <aside class="hero__card" aria-label="Быстрая заявка">
+          <h2>Быстрая заявка</h2>
+          <p>Напишите, что нужно — перезвоним и уточним объём, сроки и доставку.</p>
+          <form class="mini-form" data-form="mini">
+            <label>
+              <span>Имя</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+            </label>
+            <label>
+              <span>Что нужно</span>
+              <input type="text" name="need" placeholder="Например: утеплитель 100 мм, 40 м³">
+            </label>
+            <button class="btn btn--primary btn--block" type="submit">Отправить</button>
+            <p class="form-status form-status--mini" role="status" aria-live="polite"></p>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Ассортимент под заказ</p>
+          <h2>Категории, которые закрываем</h2>
+          <p>Нажмите категорию — она подставится в заявку.</p>
+        </div>
+        <div class="cats">
+          <button class="cat" type="button" data-cat="Теплоизоляция">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10h16M8 16h16M8 22h10" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <span class="cat__title">Теплоизоляция</span>
+            <span class="cat__text">Минвата, XPS, пенопласт, техническая изоляция</span>
+          </button>
+          <button class="cat" type="button" data-cat="Кровельные материалы">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M4 16 L16 6 L28 16 V26 H4 Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="cat__title">Кровля</span>
+            <span class="cat__text">Гибкая и металлочерепица, профнастил, рулонная кровля</span>
+          </button>
+          <button class="cat" type="button" data-cat="Фасад и сайдинг">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><rect x="6" y="5" width="20" height="22" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M6 12h20M6 18h20M6 24h20" stroke="currentColor" stroke-width="1.5"/></svg>
+            </span>
+            <span class="cat__title">Фасад и сайдинг</span>
+            <span class="cat__text">Панели, сайдинг, фасадная плитка, стеновой профнастил</span>
+          </button>
+          <button class="cat" type="button" data-cat="Водостоки и водоотведение">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M6 8h20M8 8v16M24 8v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="24" cy="22" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <span class="cat__title">Водостоки</span>
+            <span class="cat__text">Минвата, XPS, пенопласт, техническая изоляция</span>
+          </button>
+          <button class="cat" type="button" data-cat="Изоляция и плёнки">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M6 10c6 4 14 4 20 0M6 16c6 4 14 4 20 0M6 22c6 4 14 4 20 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="cat__title">Изоляция и плёнки</span>
+            <span class="cat__text">Паро-ветрозащита, мембраны, геотекстиль</span>
+          </button>
+          <button class="cat" type="button" data-cat="Крепёж">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M8 20l12-12 4 4-12 12H8v-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M17 11l4 4" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <span class="cat__title">Крепёж</span>
+            <span class="cat__text">Кровельный и фасадный крепёж, метизы</span>
+          </button>
+          <button class="cat" type="button" data-cat="Строительная химия">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M12 6h8v6l4 8a8 8 0 1 1-16 0l4-8V6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="cat__title">Химия и мастики</span>
+            <span class="cat__text">Пена, герметики, клеи, мастики, праймеры</span>
+          </button>
+          <button class="cat" type="button" data-cat="Инструменты">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M20 7l5 5-9 9H11v-5l9-9Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 24l6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="cat__title">Инструменты</span>
+            <span class="cat__text">Пена, герметики, клеи, мастики, праймеры</span>
+          </button>
+          <button class="cat" type="button" data-cat="Светильники">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 6v3M10 9l2 2M22 9l-2 2M11 18a5 5 0 0 1 10 0v2H11v-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22v2a2 2 0 0 0 4 0v-2" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <span class="cat__title">Светильники</span>
+            <span class="cat__text">Освещение для дома, объекта и улицы</span>
+          </button>
+          <button class="cat" type="button" data-cat="Другое / комплектация объекта">
+            <span class="cat__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M16 10v6l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="cat__title">Комплектация объекта</span>
+            <span class="cat__text">Несколько позиций сразу — соберём спецификацию</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="how">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Прозрачная схема</p>
+          <h2>Как получаете материалы</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="steps__num">01</span>
+            <h3>Заявка</h3>
+            <p>Пишете, что нужно: позиции, объём, адрес объекта, срок. Можно без точных артикулов — достаточно задачи.</p>
+          </li>
+          <li>
+            <span class="steps__num">02</span>
+            <h3>Поставка</h3>
+            <p>Фиксируем состав, сроки и условия оплаты. При необходимости уточняем замены под бюджет.</p>
+          </li>
+          <li>
+            <span class="steps__num">03</span>
+            <h3>Доставка</h3>
+            <p>Организуем отгрузку и доставку на объект или самовывоз — как удобнее.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section geo" id="geo">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">География поставок</p>
+          <h2>Доставляем материалы туда, где идёт работа</h2>
+          <p>Организуем отгрузку из Иркутска по регионам Сибири и Дальнего Востока. Уточним адрес объекта и подберём удобный маршрут.</p>
+        </div>
+        <div class="geo__layout">
+          <div class="geo-map" data-geo-map>
+            <div class="geo-map__legend"><span class="geo-map__legend-dot"></span> Направления поставок</div>
+            <svg class="geo-map__svg" viewBox="0 0 900 470" role="img" aria-label="Контурная карта России с городами присутствия ВЕКСНАБ">
+              <path class="geo-map__land" d="M74 177 103 143 145 128 177 101 231 99 269 77 325 85 364 62 418 70 463 50 519 62 568 48 623 65 681 60 730 78 786 84 843 116 865 151 850 181 861 217 827 241 810 276 767 284 746 318 704 327 670 356 614 346 578 371 527 356 486 377 436 355 397 375 348 350 303 364 266 340 222 350 184 323 139 329 116 297 83 282 92 247 64 218Z" />
+              <path class="geo-map__border" d="M145 128 171 177 151 222 173 270 139 329M231 99 247 148 221 196 244 242 221 290 222 350M325 85 337 134 312 178 339 225 321 274 348 310 348 350M418 70 430 121 405 166 435 211 414 258 439 307 397 375M519 62 507 111 532 157 507 205 533 248 514 304 527 356M623 65 596 112 625 158 595 203 626 249 602 296 614 346M730 78 705 125 735 170 704 216 727 267 704 327" />
+              <path class="geo-map__route geo-map__route--1" style="--geo-delay:0s" pathLength="1" d="M430 260 C 377 235 310 220 246 207 S 160 188 120 169" />
+              <path class="geo-map__route geo-map__route--2" style="--geo-delay:.15s" pathLength="1" d="M430 260 C 381 247 340 240 291 231 S 258 222 226 213" />
+              <path class="geo-map__route geo-map__route--3" style="--geo-delay:.3s" pathLength="1" d="M430 260 C 392 238 365 222 338 207 S 306 190 273 181" />
+              <path class="geo-map__route geo-map__route--4" style="--geo-delay:.45s" pathLength="1" d="M430 260 C 450 235 476 219 500 200 S 535 173 568 156" />
+              <path class="geo-map__route geo-map__route--5" style="--geo-delay:.6s" pathLength="1" d="M430 260 C 405 247 385 241 366 239" />
+              <path class="geo-map__route geo-map__route--6" style="--geo-delay:.75s" pathLength="1" d="M430 260 C 456 264 480 276 505 286" />
+              <path class="geo-map__route geo-map__route--7" style="--geo-delay:.9s" pathLength="1" d="M430 260 C 454 275 480 286 512 298" />
+              <path class="geo-map__route geo-map__route--8" style="--geo-delay:1.05s" pathLength="1" d="M430 260 C 479 275 525 280 570 273 S 630 254 681 239" />
+              <path class="geo-map__route geo-map__route--9" style="--geo-delay:1.2s" pathLength="1" d="M430 260 C 495 242 559 220 620 210 S 689 196 731 184" />
+              <path class="geo-map__route geo-map__route--10" style="--geo-delay:1.35s" pathLength="1" d="M430 260 C 482 213 529 175 580 145 S 636 122 665 113" />
+              <path class="geo-map__route geo-map__route--11" style="--geo-delay:1.5s" pathLength="1" d="M430 260 C 500 277 565 287 628 292 S 704 296 756 301" />
+              <path class="geo-map__route geo-map__route--12" style="--geo-delay:1.65s" pathLength="1" d="M430 260 C 500 285 554 315 615 328 S 687 342 735 338" />
+              <path class="geo-map__route geo-map__route--13" style="--geo-delay:1.8s" pathLength="1" d="M430 260 C 487 225 536 192 589 174 S 663 158 716 151" />
+              <path class="geo-map__route geo-map__route--14" style="--geo-delay:1.95s" pathLength="1" d="M430 260 C 520 250 601 239 672 242 S 741 247 784 255" />
+              <g class="geo-map__point geo-map__point--irkutsk" style="--geo-delay:2.1s" tabindex="0" role="button" aria-label="Иркутск">
+                <circle class="geo-map__pulse" cx="430" cy="260" r="18" />
+                <circle class="geo-map__dot" cx="430" cy="260" r="7" />
+                <text x="442" y="255">Иркутск</text>
+              </g>
+              <g class="geo-map__point geo-map__point--krasnoyarsk" style="--geo-delay:2.9s" tabindex="0" role="button" aria-label="Красноярск">
+                <circle class="geo-map__pulse" cx="366" cy="239" r="11" />
+                <circle class="geo-map__dot" cx="366" cy="239" r="4" />
+                <text x="374" y="235">Красноярск</text>
+              </g>
+              <g class="geo-map__point geo-map__point--yakutsk" style="--geo-delay:3.1s" tabindex="0" role="button" aria-label="Якутск">
+                <circle class="geo-map__pulse" cx="665" cy="113" r="11" />
+                <circle class="geo-map__dot" cx="665" cy="113" r="4" />
+                <text x="674" y="108">Якутск</text>
+              </g>
+              <g class="geo-map__point geo-map__point--chita" style="--geo-delay:3s" tabindex="0" role="button" aria-label="Чита">
+                <circle class="geo-map__pulse" cx="505" cy="286" r="11" />
+                <circle class="geo-map__dot" cx="505" cy="286" r="4" />
+                <text x="512" y="282">Чита</text>
+              </g>
+              <g class="geo-map__point geo-map__point--khabarovsk" style="--geo-delay:3.2s" tabindex="0" role="button" aria-label="Хабаровск">
+                <circle class="geo-map__pulse" cx="731" cy="184" r="11" />
+                <circle class="geo-map__dot" cx="731" cy="184" r="4" />
+                <text x="739" y="180">Хабаровск</text>
+              </g>
+              <g class="geo-map__point" style="--geo-delay:2.25s" tabindex="0" role="button" aria-label="Москва"><circle class="geo-map__pulse" cx="120" cy="169" r="11" /><circle class="geo-map__dot" cx="120" cy="169" r="4" /><text x="82" y="160">Москва</text></g>
+              <g class="geo-map__point" style="--geo-delay:2.35s" tabindex="0" role="button" aria-label="Санкт-Петербург"><circle class="geo-map__pulse" cx="145" cy="128" r="11" /><circle class="geo-map__dot" cx="145" cy="128" r="4" /><text x="152" y="123">Санкт-Петербург</text></g>
+              <g class="geo-map__point" style="--geo-delay:2.45s" tabindex="0" role="button" aria-label="Нижний Новгород"><circle class="geo-map__pulse" cx="226" cy="213" r="11" /><circle class="geo-map__dot" cx="226" cy="213" r="4" /><text x="177" y="229">Нижний Новгород</text></g>
+              <g class="geo-map__point" style="--geo-delay:2.55s" tabindex="0" role="button" aria-label="Екатеринбург"><circle class="geo-map__pulse" cx="273" cy="181" r="11" /><circle class="geo-map__dot" cx="273" cy="181" r="4" /><text x="280" y="176">Екатеринбург</text></g>
+              <g class="geo-map__point" style="--geo-delay:2.65s" tabindex="0" role="button" aria-label="Тюмень"><circle class="geo-map__pulse" cx="291" cy="231" r="11" /><circle class="geo-map__dot" cx="291" cy="231" r="4" /><text x="298" y="247">Тюмень</text></g>
+              <g class="geo-map__point" style="--geo-delay:2.75s" tabindex="0" role="button" aria-label="Новосибирск"><circle class="geo-map__pulse" cx="338" cy="207" r="11" /><circle class="geo-map__dot" cx="338" cy="207" r="4" /><text x="345" y="202">Новосибирск</text></g>
+              <g class="geo-map__point" style="--geo-delay:2.95s" tabindex="0" role="button" aria-label="Улан-Удэ"><circle class="geo-map__pulse" cx="480" cy="276" r="11" /><circle class="geo-map__dot" cx="480" cy="276" r="4" /><text x="487" y="294">Улан-Удэ</text></g>
+              <g class="geo-map__point" style="--geo-delay:3.15s" tabindex="0" role="button" aria-label="Магадан"><circle class="geo-map__pulse" cx="716" cy="151" r="11" /><circle class="geo-map__dot" cx="716" cy="151" r="4" /><text x="724" y="146">Магадан</text></g>
+              <g class="geo-map__point" style="--geo-delay:3.35s" tabindex="0" role="button" aria-label="Владивосток"><circle class="geo-map__pulse" cx="756" cy="301" r="11" /><circle class="geo-map__dot" cx="756" cy="301" r="4" /><text x="700" y="319">Владивосток</text></g>
+              <g class="geo-map__point" style="--geo-delay:3.45s" tabindex="0" role="button" aria-label="Южно-Сахалинск"><circle class="geo-map__pulse" cx="784" cy="255" r="11" /><circle class="geo-map__dot" cx="784" cy="255" r="4" /><text x="737" y="248">Южно-Сахалинск</text></g>
+            </svg>
+          </div>
+          <div class="geo__content">
+            <div class="geo__metric"><strong>15+</strong><span>городов присутствия</span></div>
+            <ul class="geo__list">
+              <li><strong>Сибирь</strong><span>Иркутск, Красноярск и города региона</span></li>
+              <li><strong>Забайкалье</strong><span>Чита и населённые пункты по маршруту</span></li>
+              <li><strong>Дальний Восток</strong><span>Якутск, Хабаровск и другие направления</span></li>
+            </ul>
+            <a class="btn btn--primary btn--lg" href="#order">Рассчитать доставку</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Почему мы</p>
+          <h2>Снабжение объекта без лишней переписки</h2>
+        </div>
+        <div class="adv">
+          <article>
+            <h3>Комплект под задачу</h3>
+            <p>Утеплитель, кровля, фасад, водостоки и крепёж — собираем поставку по объекту, а не по отдельным витринам.</p>
+          </article>
+          <article>
+            <h3>Одна заявка</h3>
+            <p>Описали объём и срок — дальше уточняем состав и закрываем поставку. Не нужно обходить несколько баз самому.</p>
+          </article>
+          <article>
+            <h3>Частным и подрядчикам</h3>
+            <p>Дом, дача, ремонт или коммерческий объект: одинаковый порядок работы, разный состав материалов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--navy" id="order">
+      <div class="container order">
+        <div class="order__intro">
+          <p class="eyebrow eyebrow--light">Форма заказа</p>
+          <h2>Опишите потребность — подготовим предложение</h2>
+          <p>Чем точнее объём и адрес, тем быстрее посчитаем. Если списка нет — напишите задачу своими словами.</p>
+          <ul class="checklist">
+            <li>Ответ в рабочие часы, обычно в тот же день</li>
+            <li>Можно прислать смету или фото объекта</li>
+            <li>Доставку укажите отдельно — посчитаем маршрутом</li>
+          </ul>
+          <div class="trust-strip" aria-label="Условия работы">
+            <div><strong>1 день</strong><span>обычный срок ответа</span></div>
+            <div><strong>15+</strong><span>городов присутствия</span></div>
+            <div><strong>Под ключ</strong><span>подбор и доставка</span></div>
+          </div>
+        </div>
+        <form class="form" data-form="full" id="order-form" novalidate>
+          <div class="form__grid">
+            <label>
+              <span>Имя *</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Телефон *</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" placeholder="для КП и сметы">
+            </label>
+            <label>
+              <span>Город / адрес объекта</span>
+              <input type="text" name="address" autocomplete="address-level2" placeholder="Город, населённый пункт, объект">
+            </label>
+            <label class="form__full">
+              <span>Категория</span>
+              <select name="category" id="category">
+                <option value="">Не выбрана / несколько</option>
+                <option>Теплоизоляция</option>
+                <option>Кровельные материалы</option>
+                <option>Фасад и сайдинг</option>
+                <option>Водостоки и водоотведение</option>
+                <option>Изоляция и плёнки</option>
+                <option>Крепёж</option>
+                <option>Строительная химия</option>
+                <option>Инструменты</option>
+                <option>Светильники</option>
+                <option>Другое / комплектация объекта</option>
+              </select>
+            </label>
+            <label>
+              <span>Объём / количество</span>
+              <input type="text" name="volume" placeholder="м², м³, шт, упаковки">
+            </label>
+            <label>
+              <span>Срок</span>
+              <input type="text" name="deadline" placeholder="Когда нужно на объект">
+            </label>
+            <label class="form__full">
+              <span>Что нужно поставить *</span>
+              <textarea name="need" rows="4" required placeholder="Например: утеплитель 100 мм — 40 м³, кровля — 180 м², доставка на объект в Иркутске"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="delivery" value="Нужна доставка">
+              <span>Нужна доставка на объект</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consent" required>
+              <span>Согласен на обработку персональных данных *</span>
+            </label>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary btn--lg" type="submit">Отправить заявку</button>
+            <a class="btn btn--light btn--lg" id="max-link" href="https://max.ru" target="_blank" rel="noopener">Написать в MAX</a>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container contacts">
+        <div>
+          <p class="eyebrow">Контакты</p>
+          <h2>ООО «ВЕКСНАБ»</h2>
+          <p class="lead">Качество. Надёжность. Снабжение строительных объектов материалами под заказ.</p>
+          <ul class="contact-list">
+            <li>
+              <span>Телефон</span>
+              <a href="tel:+79952530109">+7 (995) 253-01-09</a>
+            </li>
+            <li>
+              <span>Email</span>
+              <a href="mailto:9952530109@mail.ru">9952530109@mail.ru</a>
+            </li>
+            <li>
+              <span>MAX</span>
+              <a href="https://max.ru" target="_blank" rel="noopener">Написать в MAX</a>
+              <p class="contact-hint">Найдите нас по номеру +7 (995) 253-01-09</p>
+            </li>
+            <li>
+              <span>Фактический адрес</span>
+              <p>664035, Иркутская обл., г. Иркутск, ул. Ракитная, д. 12Б/1</p>
+            </li>
+            <li>
+              <span>Юридический адрес</span>
+              <p>665904, Иркутская обл., Слюдянский р-н, г. Слюдянка, ул. Комсомольская, д. 101</p>
+            </li>
+            <li>
+              <span>Режим</span>
+              <p>Пн–Сб 9:00–18:00, вс — по договорённости</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__note">
+          <h3>Реквизиты</h3>
+          <ul class="reqs">
+            <li><span>Организация</span> ООО «ВЕКСНАБ»</li>
+            <li><span>ИНН</span> 3812168436</li>
+            <li><span>ОГРН</span> 1253800015952</li>
+            <li><span>КПП</span> 381201001</li>
+            <li><span>Р/с</span> 40702810723580004117</li>
+            <li><span>Банк</span> Филиал «Новосибирский» АО «Альфа-Банк»</li>
+            <li><span>ИНН банка</span> 7728168971</li>
+            <li><span>БИК</span> 045004774</li>
+            <li><span>К/с</span> 30101810600000000774</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img class="footer__logo" src="images/logo.jpg" alt="ВЕКСНАБ">
+      <p>© <span id="year"></span> ООО «ВЕКСНАБ». ИНН 3812168436</p>
+      <a href="#order">Оставить заявку</a>
+    </div>
+  </footer>
+
+  <a class="fab" href="#order">Заявка</a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
