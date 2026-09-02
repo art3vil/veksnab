@@ -477,20 +477,6 @@ code { background: #fff; padding: 2px 6px; border-radius: 6px; }
 .footer__logo { height: 42px; width: auto; }
 .footer a { font-weight: 700; text-decoration: none; }
 
-.fab {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  background: var(--navy);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-  padding: 14px 18px;
-  border-radius: 999px;
-  box-shadow: var(--shadow);
-  z-index: 15;
-}
-
 .nav.is-open {
   display: flex;
   position: absolute;
