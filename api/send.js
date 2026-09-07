@@ -1,3 +1,5 @@
+const nodemailer = require("nodemailer");
+
 function value(body, key) {
   return String((body && body[key]) || "").trim();
 }
@@ -37,8 +39,8 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ ok: false, error: "required" });
   }
 
-  if (!process.env.RESEND_API_KEY || !process.env.MAIL_TO) {
-    console.error("RESEND_API_KEY and MAIL_TO must be configured in Vercel");
+  if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.MAIL_TO) {
+    console.error("SMTP_USER, SMTP_PASS and MAIL_TO must be configured in Vercel");
     return res.status(503).json({ ok: false, error: "configuration" });
   }
 
@@ -55,28 +57,27 @@ module.exports = async function handler(req, res) {
   ].join("\n");
 
   try {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + process.env.RESEND_API_KEY,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        from: process.env.MAIL_FROM || "ВЕКСНАБ <onboarding@resend.dev>",
-        to: [process.env.MAIL_TO],
-        subject: "Заявка ВЕКСНАБ",
-        text: fields
-      })
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || "smtp.mail.ru",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+      }
     });
 
-    if (!response.ok) {
-      console.error("Resend returned", response.status, await response.text());
-      return res.status(502).json({ ok: false, error: "provider" });
-    }
+    await transporter.sendMail({
+      from: process.env.SMTP_USER,
+      to: process.env.MAIL_TO,
+      replyTo: value(body, "email") || undefined,
+      subject: "Заявка ВЕКСНАБ",
+      text: fields
+    });
 
     return res.status(200).json({ ok: true });
   } catch (error) {
-    console.error("Email request failed", error);
+    console.error("Mail.ru SMTP request failed", error);
     return res.status(502).json({ ok: false, error: "provider" });
   }
 };
